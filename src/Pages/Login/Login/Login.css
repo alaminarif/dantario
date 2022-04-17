@@ -1,0 +1,23 @@
+form {
+  width: 50%;
+  margin: 50px auto;
+}
+h2 {
+  text-align: center;
+}
+form input {
+  width: 70%;
+  display: block;
+  padding: 15px;
+  margin: 20px auto;
+  outline: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+form input:focus {
+  outline: 1px solid #555;
+}
+.submit {
+  width: 30%;
+  margin: 0 auto;
+}
