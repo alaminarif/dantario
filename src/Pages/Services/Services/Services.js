@@ -48,7 +48,7 @@ const Services = () => {
     },
   ];
   return (
-    <div className="container">
+    <div className="container py-5">
       <h2 className="text-center">Services</h2>
       <div className="row ">
         {services.map((service) => (

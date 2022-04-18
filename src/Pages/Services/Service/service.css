@@ -1,0 +1,17 @@
+.homeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  height: 260px;
+  width: 320px;
+}
+.homeCard img {
+  width: 70px;
+  height: 70px;
+}
+.homeCard button {
+  position: absolute;
+  bottom: 0;
+}

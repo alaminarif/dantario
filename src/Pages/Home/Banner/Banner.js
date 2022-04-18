@@ -13,14 +13,14 @@ const Banner = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img className="d-block w-100" src={Banner1} alt="First slide" />
+        <img className="d-block w-100" src={Banner2} alt="First slide" />
         <Carousel.Caption>
           <h3>High Innovative Technology </h3>
           <p>There are only 2 dental specialties that only focus on dental esthetics: Prosthodontics and Orthodontics.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Banner2} alt="Second slide" />
+        <img className="d-block w-100" src={Banner1} alt="Second slide" />
 
         <Carousel.Caption>
           <h3>Teeth Whitening</h3>
