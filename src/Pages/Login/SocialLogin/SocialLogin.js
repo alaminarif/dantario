@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  auth;
   const navigate = useNavigate();
   let errorElement;
   if (error) {
@@ -23,7 +22,7 @@ const SocialLogin = () => {
 
   return (
     <div>
-      <div className=" w-50 mx-auto d-flex align-items-center">
+      <div className=" w-25 mx-auto d-flex align-items-center">
         <div style={{ height: "1px" }} className="w-50 bg-primary"></div>
         <div className=" mx-2">or</div>
         <div style={{ height: "1px" }} className="w-50 bg-primary"></div>

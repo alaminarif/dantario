@@ -1,6 +1,5 @@
 import { signOut } from "firebase/auth";
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
@@ -8,16 +7,11 @@ import auth from "../../../firebase.init";
 import "./Header.css";
 
 const Header = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  let from = location.state?.from?.pathname || "/";
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
     signOut(auth);
   };
-  if (user) {
-    navigate(from, { replace: true });
-  }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">

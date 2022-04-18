@@ -2,16 +2,17 @@ import React from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
-  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
     navigate("/home");
   };
   const navigateLogin = () => {
@@ -26,9 +27,13 @@ const Register = () => {
         <input type="password" name="password" id="" placeholder="Your Password" required />
         <input className="submit" type="submit" value="Submit" />
         <p>
-          Already accout Login? <span onClick={navigateLogin}>login</span>
+          Already accout Login?{" "}
+          <span className="text-primary" onClick={navigateLogin}>
+            Register
+          </span>
         </p>
       </form>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

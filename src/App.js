@@ -9,9 +9,9 @@ import Services from "./Pages/Services/Services/Services";
 import Blogs from "./Pages/Blogs/Blogs/Blogs";
 import About from "./Pages/About/About/About";
 import Register from "./Pages/Login/Register/Register";
-
 import CheckOut from "./Pages/Services/CheckOut/CheckOut";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
+import MoreInFo from "./Pages/Services/MoreInFo/MoreInFo";
 
 function App() {
   // const auth = getAuth(app);
@@ -26,6 +26,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/moreinfo/:moreinfoId" element={<MoreInFo></MoreInFo>}></Route>
         <Route
           path="/checkout"
           element={

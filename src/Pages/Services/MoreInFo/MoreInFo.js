@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const MoreInFo = () => {
+  const { moreinfoId } = useParams();
   return (
     <div>
-      <h2>this is more information</h2>
+      <h2>This is more information page {moreinfoId}</h2>
       <Link to="/checkout">
-        <button>CheckOut</button>
+        <button className="btn btn-primary px-5">CheckOut</button>
       </Link>
     </div>
   );
