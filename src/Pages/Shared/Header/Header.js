@@ -14,9 +14,9 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light " style={{ backgroundColor: "#04aa6d", color: "#fff" }}>
         <div className="container">
-          <Link to="/home" className="navbar-brand">
+          <Link to="/home" className="navbar-brand text-light">
             Dantario
           </Link>
           <button
@@ -32,38 +32,27 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link to="/" className="nav-link " aria-current="page">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/services" className="nav-link">
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/blogs" className="nav-link">
-                  Blogs
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  About Me
-                </Link>
-              </li>
+              <Link style={{ color: "#fff" }} to="/" className="nav-link " aria-current="page">
+                Home
+              </Link>
+              <Link to="/services" className="text-light nav-link">
+                Services
+              </Link>
+              <Link to="/blogs" className="text-light nav-link">
+                Blogs
+              </Link>
+              <Link to="/about" className="text-light nav-link">
+                About Me
+              </Link>
+
               {user ? (
-                <li className="nav-item">
-                  <Link onClick={handleSignOut} to="/login" className="nav-link">
-                    Sign out
-                  </Link>
-                </li>
+                <Link onClick={handleSignOut} to="/login" className="text-light nav-link">
+                  Sign out
+                </Link>
               ) : (
-                <li className="nav-item">
-                  <Link to="/login" className="nav-link">
-                    Login
-                  </Link>
-                </li>
+                <Link to="/login" className="text-light nav-link">
+                  Login
+                </Link>
               )}
             </ul>
           </div>

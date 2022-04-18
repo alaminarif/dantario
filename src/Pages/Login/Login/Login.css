@@ -1,14 +1,20 @@
-form {
-  width: 50%;
+.form {
+  box-sizing: border-box;
+  width: 30%;
   margin: 50px auto;
 }
+form {
+  padding: 30px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
 h2 {
-  text-align: center;
+  margin: 25px 15px 10px;
 }
 form input {
-  width: 70%;
+  width: 100%;
   display: block;
-  padding: 15px;
+  padding: 10px;
   margin: 20px 0;
   outline: 0;
   border: 1px solid #ddd;
@@ -16,8 +22,15 @@ form input {
 }
 
 form input:focus {
-  outline: 1px solid #555;
+  outline: 1px solid #999;
+}
+.text-color {
+  color: #04aa6d;
+  margin-left: 10px;
 }
 .submit {
-  width: 30%;
+  width: 100%;
+  margin: 40px 0 20px 0;
+  background-color: #04aa6d;
+  color: #fff;
 }

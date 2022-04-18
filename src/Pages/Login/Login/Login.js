@@ -47,28 +47,28 @@ const Login = () => {
     }
   };
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="form">
       <form onSubmit={handleSubmit}>
+        <h2>Log in</h2>
         <input type="email" ref={emailRef} name="email" id="" placeholder="Your Email" required />
         <input type="password" name="password" id="" placeholder="Your Password" required />
-        <input className="submit" type="submit" value="Login" />
+        <input className="submit" type="submit" value="Log in" />
         <p className="text-danger w-50 mx-auto">{errorElement}</p>
         <p>
-          New to genius car?
-          <button onClick={navigateRegister} className=" btn btn-link pe-auto text-decoration-none">
+          Needed an account?
+          <span onClick={navigateRegister} className=" text-color pe-auto text-decoration-none">
             please register
-          </button>
+          </span>
         </p>
         <p>
           Forget password?{" "}
-          <span className="text-primary" onClick={resetPassword}>
+          <span className="text-color" onClick={resetPassword}>
             Reset Password
           </span>
         </p>
+        <SocialLogin></SocialLogin>
       </form>
 
-      <SocialLogin></SocialLogin>
       <ToastContainer />
     </div>
   );

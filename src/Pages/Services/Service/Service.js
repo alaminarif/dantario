@@ -13,7 +13,7 @@ const Service = ({ service }) => {
       <img style={{ width: "70px", height: "70px" }} src={img} alt="" />
       <h5 className="card-title">{name}</h5>
       <p className="w-75  ">{discription}</p>
-      <button onClick={() => handleMoreInfo(id)} className="btn btn-primary px-4">
+      <button onClick={() => handleMoreInfo(id)} className="btn  px-4" style={{ backgroundColor: "#04aa6d", color: "#fff" }}>
         MoreInfo
       </button>
     </div>

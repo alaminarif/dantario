@@ -19,21 +19,21 @@ const Register = () => {
     navigate("/login");
   };
   return (
-    <div>
-      <h2>Register`</h2>
+    <div className="form">
       <form onSubmit={handleSubmit}>
+        <h2>Register</h2>
         <input type="text" name="name" id="" placeholder="Your Name" required />
         <input type="email" name="email" id="" placeholder="Your Email" required />
         <input type="password" name="password" id="" placeholder="Your Password" required />
         <input className="submit" type="submit" value="Submit" />
         <p>
           Already accout Login?{" "}
-          <span className="text-primary" onClick={navigateLogin}>
+          <span className="text-color" onClick={navigateLogin}>
             Register
           </span>
         </p>
+        <SocialLogin></SocialLogin>
       </form>
-      <SocialLogin></SocialLogin>
     </div>
   );
 };

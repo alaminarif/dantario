@@ -35,7 +35,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/NotFount" element={<NotFount></NotFount>}></Route>
+        <Route path="*" element={<NotFount></NotFount>}></Route>
       </Routes>
 
       <Footer></Footer>
