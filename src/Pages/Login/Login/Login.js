@@ -68,7 +68,6 @@ const Login = () => {
         </p>
         <SocialLogin></SocialLogin>
       </form>
-
       <ToastContainer />
     </div>
   );

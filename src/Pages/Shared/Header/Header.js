@@ -4,7 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import CustomLink from "../CustomLink/CustomLink";
-
 import "./Header.css";
 
 const Header = () => {
@@ -12,7 +11,6 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth);
   };
-
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light " style={{ backgroundColor: "#04aa6d", color: "#fff" }}>

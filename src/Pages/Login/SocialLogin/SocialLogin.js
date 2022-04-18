@@ -19,7 +19,6 @@ const SocialLogin = () => {
   if (user) {
     navigate("/home");
   }
-
   return (
     <div>
       <div className=" mx-2 d-flex align-items-center">
