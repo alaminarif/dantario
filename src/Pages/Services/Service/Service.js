@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Service = ({ service }) => {
   const { id, name, discription, img } = service;
   const navigate = useNavigate();
-  const handleMoreInfo = () => {
-    navigate("/moreinfo");
+  const handleMoreInfo = (id) => {
+    navigate(`/moreinfo/${id}`);
   };
   console.log(service);
   return (
@@ -13,7 +13,7 @@ const Service = ({ service }) => {
       <img style={{ width: "70px", height: "70px" }} src={img} alt="" />
       <h5 className="card-title">{name}</h5>
       <p className="w-75 mx-auto ">{discription}</p>
-      <button onClick={handleMoreInfo} className="btn btn-primary px-4">
+      <button onClick={() => handleMoreInfo(id)} className="btn btn-primary px-4">
         MoreInfo
       </button>
     </div>
