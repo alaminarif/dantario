@@ -52,21 +52,22 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <input type="email" ref={emailRef} name="email" id="" placeholder="Your Email" required />
         <input type="password" name="password" id="" placeholder="Your Password" required />
-        <input className="submit" type="submit" value="Submit" />
+        <input className="submit" type="submit" value="Login" />
+        <p className="text-danger w-50 mx-auto">{errorElement}</p>
+        <p>
+          New to genius car?
+          <button onClick={navigateRegister} className=" btn btn-link pe-auto text-decoration-none">
+            please register
+          </button>
+        </p>
+        <p>
+          Forget password?{" "}
+          <span className="text-primary" onClick={resetPassword}>
+            Reset Password
+          </span>
+        </p>
       </form>
-      <p className="text-danger w-50 mx-auto">{errorElement}</p>
-      <p>
-        New to genius car?
-        <button onClick={navigateRegister} className=" btn btn-link pe-auto text-decoration-none">
-          please register
-        </button>
-      </p>
-      <p>
-        Forget password?{" "}
-        <span className="text-primary" onClick={resetPassword}>
-          Reset Password
-        </span>
-      </p>
+
       <SocialLogin></SocialLogin>
       <ToastContainer />
     </div>

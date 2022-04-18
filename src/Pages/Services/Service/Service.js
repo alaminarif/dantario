@@ -12,7 +12,7 @@ const Service = ({ service }) => {
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">
       <img style={{ width: "70px", height: "70px" }} src={img} alt="" />
       <h5 className="card-title">{name}</h5>
-      <p className="w-75 mx-auto ">{discription}</p>
+      <p className="w-75  ">{discription}</p>
       <button onClick={() => handleMoreInfo(id)} className="btn btn-primary px-4">
         MoreInfo
       </button>

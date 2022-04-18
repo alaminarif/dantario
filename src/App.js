@@ -16,7 +16,7 @@ import MoreInFo from "./Pages/Services/MoreInFo/MoreInFo";
 function App() {
   // const auth = getAuth(app);
   return (
-    <div className="App">
+    <div>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
