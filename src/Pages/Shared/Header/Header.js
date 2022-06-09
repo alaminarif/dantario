@@ -50,7 +50,7 @@ const Header = () => {
                 </CustomLink>
               ) : (
                 <CustomLink to="/login" className="text-light nav-link">
-                  Login
+                  Sign in
                 </CustomLink>
               )}
             </ul>
